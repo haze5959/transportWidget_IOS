@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="256" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmT-s4-Jcb">
+                                <rect key="frame" x="36" y="71" width="303" height="80"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.82745098039999998" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="9ZX-8a-EvT"/>
+                                </constraints>
+                                <state key="normal" title="배고픈 개발자를 위한 기부"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="254" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfZ-1U-nyj">
+                                <rect key="frame" x="36" y="293.5" width="303" height="80"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.82745098039999998" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="8zH-th-REu"/>
+                                </constraints>
+                                <state key="normal" title="지하철 역 찾기"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wkq-ao-aCy">
+                                <rect key="frame" x="36" y="516" width="303" height="80"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.82745098039999998" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="vsx-St-JT0"/>
+                                </constraints>
+                                <state key="normal" title="버스 정류장 찾기"/>
+                                <connections>
+                                    <action selector="goFindBus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Vh-B5-6V7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UfZ-1U-nyj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="18w-3h-jnZ"/>
+                            <constraint firstItem="Wkq-ao-aCy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="5/3" id="4T8-Es-O3p"/>
+                            <constraint firstItem="UfZ-1U-nyj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EBH-Fc-yWK"/>
+                            <constraint firstItem="OmT-s4-Jcb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="cRW-Zc-ODm"/>
+                            <constraint firstItem="Wkq-ao-aCy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="fJ4-Zr-NCH"/>
+                            <constraint firstItem="OmT-s4-Jcb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1/3" id="hQO-fn-DSa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wkq-ao-aCy" secondAttribute="trailing" constant="20" id="r4y-wk-94f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UfZ-1U-nyj" secondAttribute="trailing" constant="20" id="vqa-QG-Lsr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OmT-s4-Jcb" secondAttribute="trailing" constant="20" id="wJd-Qh-Fai"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>

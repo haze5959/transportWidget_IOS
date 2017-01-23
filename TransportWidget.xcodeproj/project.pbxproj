@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE1A6BE91E31D88300C8450C /* FindSubwayController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1A6BE81E31D88300C8450C /* FindSubwayController.m */; };
+		CE1A6BEB1E31D8AD00C8450C /* FindSubwayController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1A6BEA1E31D8AD00C8450C /* FindSubwayController.xib */; };
+		CE1A6BF71E31DF6300C8450C /* SubwayResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1A6BF51E31DF6300C8450C /* SubwayResultController.m */; };
+		CE1A6BF81E31DF6300C8450C /* SubwayResultController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1A6BF61E31DF6300C8450C /* SubwayResultController.xib */; };
+		CE1A6BFD1E31F0D500C8450C /* WidgetSelectPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1A6BFB1E31F0D500C8450C /* WidgetSelectPopUp.m */; };
+		CE1A6BFE1E31F0D500C8450C /* WidgetSelectPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1A6BFC1E31F0D500C8450C /* WidgetSelectPopUp.xib */; };
+		CE1A6C011E31FC8B00C8450C /* checkbox_off_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1A6C001E31FC8B00C8450C /* checkbox_off_nor@2x.png */; };
+		CE1A6C031E31FCB900C8450C /* checkbox_on_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1A6C021E31FCB900C8450C /* checkbox_on_nor@2x.png */; };
+		CE1A6C061E31FCEB00C8450C /* checkbox_off_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1A6C041E31FCEB00C8450C /* checkbox_off_nor@3x.png */; };
+		CE1A6C071E31FCEB00C8450C /* checkbox_on_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1A6C051E31FCEB00C8450C /* checkbox_on_nor@3x.png */; };
+		CE6C81A61E2317D000AC1CFC /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6C81A51E2317D000AC1CFC /* NotificationCenter.framework */; };
+		CE6C81AA1E2317D000AC1CFC /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C81A91E2317D000AC1CFC /* TodayViewController.m */; };
+		CE6C81AD1E2317D000AC1CFC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6C81AB1E2317D000AC1CFC /* MainInterface.storyboard */; };
+		CE6C81B11E2317D000AC1CFC /* TransportWidgetExtense.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE6C81A31E2317D000AC1CFC /* TransportWidgetExtense.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE6C81BB1E23561D00AC1CFC /* FindBusController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C81B91E23561D00AC1CFC /* FindBusController.m */; };
+		CE6C81BC1E23561D00AC1CFC /* FindBusController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6C81BA1E23561D00AC1CFC /* FindBusController.xib */; };
+		CEB08BC81E1DF74D00C12585 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB08BC71E1DF74D00C12585 /* main.m */; };
+		CEB08BCB1E1DF74D00C12585 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB08BCA1E1DF74D00C12585 /* AppDelegate.m */; };
+		CEB08BCE1E1DF74D00C12585 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB08BCD1E1DF74D00C12585 /* ViewController.m */; };
+		CEB08BD11E1DF74D00C12585 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB08BCF1E1DF74D00C12585 /* Main.storyboard */; };
+		CEB08BD31E1DF74D00C12585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB08BD21E1DF74D00C12585 /* Assets.xcassets */; };
+		CEB08BD61E1DF74D00C12585 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB08BD41E1DF74D00C12585 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE6C81AF1E2317D000AC1CFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEB08BBB1E1DF74D00C12585 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE6C81A21E2317D000AC1CFC;
+			remoteInfo = TransportWidgetExtense;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE6C81B51E2317D000AC1CFC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CE6C81B11E2317D000AC1CFC /* TransportWidgetExtense.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CE1A6BE71E31D88300C8450C /* FindSubwayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSubwayController.h; sourceTree = "<group>"; };
+		CE1A6BE81E31D88300C8450C /* FindSubwayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSubwayController.m; sourceTree = "<group>"; };
+		CE1A6BEA1E31D8AD00C8450C /* FindSubwayController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindSubwayController.xib; sourceTree = "<group>"; };
+		CE1A6BF41E31DF6300C8450C /* SubwayResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubwayResultController.h; sourceTree = "<group>"; };
+		CE1A6BF51E31DF6300C8450C /* SubwayResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubwayResultController.m; sourceTree = "<group>"; };
+		CE1A6BF61E31DF6300C8450C /* SubwayResultController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubwayResultController.xib; sourceTree = "<group>"; };
+		CE1A6BFA1E31F0D500C8450C /* WidgetSelectPopUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetSelectPopUp.h; sourceTree = "<group>"; };
+		CE1A6BFB1E31F0D500C8450C /* WidgetSelectPopUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetSelectPopUp.m; sourceTree = "<group>"; };
+		CE1A6BFC1E31F0D500C8450C /* WidgetSelectPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WidgetSelectPopUp.xib; sourceTree = "<group>"; };
+		CE1A6C001E31FC8B00C8450C /* checkbox_off_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_off_nor@2x.png"; sourceTree = "<group>"; };
+		CE1A6C021E31FCB900C8450C /* checkbox_on_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_on_nor@2x.png"; sourceTree = "<group>"; };
+		CE1A6C041E31FCEB00C8450C /* checkbox_off_nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_off_nor@3x.png"; sourceTree = "<group>"; };
+		CE1A6C051E31FCEB00C8450C /* checkbox_on_nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_on_nor@3x.png"; sourceTree = "<group>"; };
+		CE6C81A31E2317D000AC1CFC /* TransportWidgetExtense.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TransportWidgetExtense.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE6C81A51E2317D000AC1CFC /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		CE6C81A81E2317D000AC1CFC /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		CE6C81A91E2317D000AC1CFC /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		CE6C81AC1E2317D000AC1CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		CE6C81AE1E2317D000AC1CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE6C81B81E23561D00AC1CFC /* FindBusController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindBusController.h; sourceTree = "<group>"; };
+		CE6C81B91E23561D00AC1CFC /* FindBusController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindBusController.m; sourceTree = "<group>"; };
+		CE6C81BA1E23561D00AC1CFC /* FindBusController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindBusController.xib; sourceTree = "<group>"; };
+		CEB08BC31E1DF74D00C12585 /* TransportWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransportWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB08BC71E1DF74D00C12585 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CEB08BC91E1DF74D00C12585 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CEB08BCA1E1DF74D00C12585 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CEB08BCC1E1DF74D00C12585 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CEB08BCD1E1DF74D00C12585 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CEB08BD01E1DF74D00C12585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEB08BD21E1DF74D00C12585 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEB08BD51E1DF74D00C12585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEB08BD71E1DF74D00C12585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE6C81A01E2317D000AC1CFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6C81A61E2317D000AC1CFC /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB08BC01E1DF74D00C12585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE1A6BEC1E31DD9E00C8450C /* FindBus */ = {
+			isa = PBXGroup;
+			children = (
+				CE6C81B81E23561D00AC1CFC /* FindBusController.h */,
+				CE6C81B91E23561D00AC1CFC /* FindBusController.m */,
+				CE6C81BA1E23561D00AC1CFC /* FindBusController.xib */,
+			);
+			name = FindBus;
+			sourceTree = "<group>";
+		};
+		CE1A6BED1E31DDA800C8450C /* FindSubway */ = {
+			isa = PBXGroup;
+			children = (
+				CE1A6BE71E31D88300C8450C /* FindSubwayController.h */,
+				CE1A6BE81E31D88300C8450C /* FindSubwayController.m */,
+				CE1A6BEA1E31D8AD00C8450C /* FindSubwayController.xib */,
+				CE1A6BF41E31DF6300C8450C /* SubwayResultController.h */,
+				CE1A6BF51E31DF6300C8450C /* SubwayResultController.m */,
+				CE1A6BF61E31DF6300C8450C /* SubwayResultController.xib */,
+			);
+			name = FindSubway;
+			sourceTree = "<group>";
+		};
+		CE1A6BF91E31F09F00C8450C /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				CE1A6BFA1E31F0D500C8450C /* WidgetSelectPopUp.h */,
+				CE1A6BFB1E31F0D500C8450C /* WidgetSelectPopUp.m */,
+				CE1A6BFC1E31F0D500C8450C /* WidgetSelectPopUp.xib */,
+			);
+			name = PopUp;
+			sourceTree = "<group>";
+		};
+		CE1A6BFF1E31FC2200C8450C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CE1A6C041E31FCEB00C8450C /* checkbox_off_nor@3x.png */,
+				CE1A6C051E31FCEB00C8450C /* checkbox_on_nor@3x.png */,
+				CE1A6C021E31FCB900C8450C /* checkbox_on_nor@2x.png */,
+				CE1A6C001E31FC8B00C8450C /* checkbox_off_nor@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		CE6C81A41E2317D000AC1CFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE6C81A51E2317D000AC1CFC /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE6C81A71E2317D000AC1CFC /* TransportWidgetExtense */ = {
+			isa = PBXGroup;
+			children = (
+				CE6C81A81E2317D000AC1CFC /* TodayViewController.h */,
+				CE6C81A91E2317D000AC1CFC /* TodayViewController.m */,
+				CE6C81AB1E2317D000AC1CFC /* MainInterface.storyboard */,
+				CE6C81AE1E2317D000AC1CFC /* Info.plist */,
+			);
+			path = TransportWidgetExtense;
+			sourceTree = "<group>";
+		};
+		CEB08BBA1E1DF74D00C12585 = {
+			isa = PBXGroup;
+			children = (
+				CEB08BC51E1DF74D00C12585 /* TransportWidget */,
+				CE6C81A71E2317D000AC1CFC /* TransportWidgetExtense */,
+				CE6C81A41E2317D000AC1CFC /* Frameworks */,
+				CEB08BC41E1DF74D00C12585 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEB08BC41E1DF74D00C12585 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEB08BC31E1DF74D00C12585 /* TransportWidget.app */,
+				CE6C81A31E2317D000AC1CFC /* TransportWidgetExtense.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEB08BC51E1DF74D00C12585 /* TransportWidget */ = {
+			isa = PBXGroup;
+			children = (
+				CE1A6BF91E31F09F00C8450C /* PopUp */,
+				CE1A6BED1E31DDA800C8450C /* FindSubway */,
+				CE1A6BEC1E31DD9E00C8450C /* FindBus */,
+				CEB08BC91E1DF74D00C12585 /* AppDelegate.h */,
+				CEB08BCA1E1DF74D00C12585 /* AppDelegate.m */,
+				CEB08BCC1E1DF74D00C12585 /* ViewController.h */,
+				CEB08BCD1E1DF74D00C12585 /* ViewController.m */,
+				CEB08BCF1E1DF74D00C12585 /* Main.storyboard */,
+				CEB08BD21E1DF74D00C12585 /* Assets.xcassets */,
+				CEB08BD41E1DF74D00C12585 /* LaunchScreen.storyboard */,
+				CEB08BD71E1DF74D00C12585 /* Info.plist */,
+				CEB08BC61E1DF74D00C12585 /* Supporting Files */,
+			);
+			path = TransportWidget;
+			sourceTree = "<group>";
+		};
+		CEB08BC61E1DF74D00C12585 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE1A6BFF1E31FC2200C8450C /* images */,
+				CEB08BC71E1DF74D00C12585 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE6C81A21E2317D000AC1CFC /* TransportWidgetExtense */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE6C81B41E2317D000AC1CFC /* Build configuration list for PBXNativeTarget "TransportWidgetExtense" */;
+			buildPhases = (
+				CE6C819F1E2317D000AC1CFC /* Sources */,
+				CE6C81A01E2317D000AC1CFC /* Frameworks */,
+				CE6C81A11E2317D000AC1CFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TransportWidgetExtense;
+			productName = TransportWidgetExtense;
+			productReference = CE6C81A31E2317D000AC1CFC /* TransportWidgetExtense.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		CEB08BC21E1DF74D00C12585 /* TransportWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB08BDA1E1DF74D00C12585 /* Build configuration list for PBXNativeTarget "TransportWidget" */;
+			buildPhases = (
+				CEB08BBF1E1DF74D00C12585 /* Sources */,
+				CEB08BC01E1DF74D00C12585 /* Frameworks */,
+				CEB08BC11E1DF74D00C12585 /* Resources */,
+				CE6C81B51E2317D000AC1CFC /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE6C81B01E2317D000AC1CFC /* PBXTargetDependency */,
+			);
+			name = TransportWidget;
+			productName = TransportWidget;
+			productReference = CEB08BC31E1DF74D00C12585 /* TransportWidget.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEB08BBB1E1DF74D00C12585 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "권오규";
+				TargetAttributes = {
+					CE6C81A21E2317D000AC1CFC = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					CEB08BC21E1DF74D00C12585 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CEB08BBE1E1DF74D00C12585 /* Build configuration list for PBXProject "TransportWidget" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEB08BBA1E1DF74D00C12585;
+			productRefGroup = CEB08BC41E1DF74D00C12585 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEB08BC21E1DF74D00C12585 /* TransportWidget */,
+				CE6C81A21E2317D000AC1CFC /* TransportWidgetExtense */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE6C81A11E2317D000AC1CFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6C81AD1E2317D000AC1CFC /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB08BC11E1DF74D00C12585 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB08BD61E1DF74D00C12585 /* LaunchScreen.storyboard in Resources */,
+				CE6C81BC1E23561D00AC1CFC /* FindBusController.xib in Resources */,
+				CEB08BD31E1DF74D00C12585 /* Assets.xcassets in Resources */,
+				CE1A6C011E31FC8B00C8450C /* checkbox_off_nor@2x.png in Resources */,
+				CE1A6C031E31FCB900C8450C /* checkbox_on_nor@2x.png in Resources */,
+				CE1A6BEB1E31D8AD00C8450C /* FindSubwayController.xib in Resources */,
+				CEB08BD11E1DF74D00C12585 /* Main.storyboard in Resources */,
+				CE1A6BFE1E31F0D500C8450C /* WidgetSelectPopUp.xib in Resources */,
+				CE1A6C061E31FCEB00C8450C /* checkbox_off_nor@3x.png in Resources */,
+				CE1A6BF81E31DF6300C8450C /* SubwayResultController.xib in Resources */,
+				CE1A6C071E31FCEB00C8450C /* checkbox_on_nor@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE6C819F1E2317D000AC1CFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6C81AA1E2317D000AC1CFC /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB08BBF1E1DF74D00C12585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB08BCE1E1DF74D00C12585 /* ViewController.m in Sources */,
+				CE1A6BE91E31D88300C8450C /* FindSubwayController.m in Sources */,
+				CE6C81BB1E23561D00AC1CFC /* FindBusController.m in Sources */,
+				CEB08BCB1E1DF74D00C12585 /* AppDelegate.m in Sources */,
+				CE1A6BF71E31DF6300C8450C /* SubwayResultController.m in Sources */,
+				CE1A6BFD1E31F0D500C8450C /* WidgetSelectPopUp.m in Sources */,
+				CEB08BC81E1DF74D00C12585 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE6C81B01E2317D000AC1CFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE6C81A21E2317D000AC1CFC /* TransportWidgetExtense */;
+			targetProxy = CE6C81AF1E2317D000AC1CFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE6C81AB1E2317D000AC1CFC /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE6C81AC1E2317D000AC1CFC /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		CEB08BCF1E1DF74D00C12585 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEB08BD01E1DF74D00C12585 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEB08BD41E1DF74D00C12585 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEB08BD51E1DF74D00C12585 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE6C81B21E2317D000AC1CFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TransportWidgetExtense/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = OQ.TransportWidget.TransportWidgetExtense;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CE6C81B31E2317D000AC1CFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TransportWidgetExtense/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = OQ.TransportWidget.TransportWidgetExtense;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CEB08BD81E1DF74D00C12585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEB08BD91E1DF74D00C12585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEB08BDB1E1DF74D00C12585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TransportWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = OQ.TransportWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CEB08BDC1E1DF74D00C12585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TransportWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = OQ.TransportWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE6C81B41E2317D000AC1CFC /* Build configuration list for PBXNativeTarget "TransportWidgetExtense" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE6C81B21E2317D000AC1CFC /* Debug */,
+				CE6C81B31E2317D000AC1CFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEB08BBE1E1DF74D00C12585 /* Build configuration list for PBXProject "TransportWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB08BD81E1DF74D00C12585 /* Debug */,
+				CEB08BD91E1DF74D00C12585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEB08BDA1E1DF74D00C12585 /* Build configuration list for PBXNativeTarget "TransportWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB08BDB1E1DF74D00C12585 /* Debug */,
+				CEB08BDC1E1DF74D00C12585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEB08BBB1E1DF74D00C12585 /* Project object */;
+}
