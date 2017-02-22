@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FindBusController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface FindBusController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSXMLParserDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UISearchBar *inputText;

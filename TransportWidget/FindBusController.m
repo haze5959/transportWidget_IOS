@@ -10,7 +10,12 @@
 
 @interface FindBusController ()
 
+@property bool doGetItemList;  //아이템을 만났다면
+@property bool doGetData;  //파싱할 때 데이터를 가져올지 말지
+@property bool isParseLineEnd;  //파싱할 때 데이터를 가져올지 말지
+@property NSMutableString* combineString;  //파싱된 문자열을 조합할 때 사용
 @property NSMutableArray *array;
+@property NSMutableDictionary *infoDic;    //한 버스의 정보들을 담을 곳
 @property (nonatomic, strong) NSMutableData *responseData;
 
 @end
@@ -19,7 +24,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = [[NSMutableArray alloc]initWithArray: @[@"정류소 고유번호를 검색하세요!"]];
+    self.infoDic = [[NSMutableDictionary alloc]initWithDictionary:@{@"arrmsg1":@"",
+                                                                    @"arrmsg2":@"",
+                                                                    @"rtNm":@"정류장 번호를 입력하세요.",
+                                                                    @"stNm":@""}];
+    self.array = [[NSMutableArray alloc]initWithObjects:self.infoDic, nil];
     
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     [self.view addGestureRecognizer:tap];
@@ -46,11 +55,15 @@
     [self.inputText resignFirstResponder];
 }
 
+
+
 //정류소 찾기
 - (IBAction)findBus:(UIButton *)sender {
     NSLog(@"OQ - find the bus Station");
     
-    NSString *path = [NSString stringWithFormat:@"http://ws.bus.go.kr/api/rest/stationinfo/getStationByUid?serviceKey=Hn1zrxA4VzEINy0sxFra88Pznz3ZZeKyvzHA3G5ikHFfeLG2VYUmpoYcZGZ0Pn3CcwsQXhaRUJM7qbYwbMakkA==&arsId=%@", @"19234"];
+    NSString *searchNum = self.inputText.text;
+    
+    NSString *path = [NSString stringWithFormat:@"http://ws.bus.go.kr/api/rest/stationinfo/getStationByUid?serviceKey=Hn1zrxA4VzEINy0sxFra88Pznz3ZZeKyvzHA3G5ikHFfeLG2VYUmpoYcZGZ0Pn3CcwsQXhaRUJM7qbYwbMakkA==&arsId=%@", searchNum];
     NSString *escapedPath = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     NSURL *url = [NSURL URLWithString:escapedPath];
     
@@ -64,12 +77,12 @@
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     NSLog(@"응답 받았다");
     [self.responseData setLength:0];
+    self.responseData = [[NSMutableData alloc] init];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     NSLog(@"데이터도 받았다 => %lu bytes of data", (unsigned long)[data length]);
     
-    self.responseData = [[NSMutableData alloc] init];
     [self.responseData appendData:data];
 }
 
@@ -82,46 +95,85 @@
     NSLog(@"로딩 끝");
     NSLog(@"Succeeded! Received %lu bytes of data",(unsigned long)[self.responseData length]);
     
-    // convert to JSON
-//    NSError *myError = nil;
-//    NSDictionary *res = [NSJSONSerialization JSONObjectWithData:self.responseData options:NSJSONReadingMutableLeaves error:&myError];
-//    
-//    NSArray *row = res[@"IndividuallyPostedLandPriceService"][@"row"];
-//    
-//    NSMutableString *valueResult = [[NSMutableString alloc] initWithFormat:@"%@ 땅값 리스트\n\n", @"임시"];
-//    
-//    for(NSString *key in row) {
-//        NSDictionary *valueDictionary = (NSDictionary *)key;
-//        
-//        id value = [valueDictionary objectForKey:@"BONBEON"];
-//        NSString *valueAsString = (NSString *)value;
-//        NSLog(@"본번: %@", valueAsString);
-//        [valueResult appendFormat:@"본번: %@ \n", valueAsString];
-//        
-//        value = [valueDictionary objectForKey:@"BUBEON"];
-//        valueAsString = (NSString *)value;
-//        NSLog(@"부번: %@", valueAsString);
-//        [valueResult appendFormat:@"부번: %@ \n", valueAsString];
-//        
-//        value = [valueDictionary objectForKey:@"PILGI_NM"];
-//        valueAsString = (NSString *)value;
-//        NSLog(@"필지구분명: %@", valueAsString);
-//        [valueResult appendFormat:@"필지구분명: %@ \n", valueAsString];
-//        
-//        value = [valueDictionary objectForKey:@"BASE_MON"];
-//        valueAsString = (NSString *)value;
-//        NSLog(@"기준 년월일: %@", valueAsString);
-//        [valueResult appendFormat:@"기준 년월일: %@ \n", valueAsString];
-//        
-//        value = [valueDictionary objectForKey:@"JIGA"];
-//        valueAsString = (NSString *)value;
-//        NSLog(@"지가: %@", valueAsString);
-//        [valueResult appendFormat:@"지가: %@ \n", valueAsString];
-//        
-//        [valueResult appendFormat:@"===========================\n"];
-//    }
+    //해석 시작!
+    //NSString *dataToString = [[NSString alloc] initWithData:self.responseData encoding:NSASCIIStringEncoding];
+    NSXMLParser *xmlData = [[NSXMLParser alloc] initWithData:self.responseData];
+    xmlData.delegate = self;
+    [self.array removeAllObjects];  //모든 입력값을 지우고 값을 받아들일 준비를 한다.
+    if ([xmlData parse]) {
+        NSLog(@"파싱 가능!!");
+        [self.tableView reloadData];
+    }else{
+        NSLog(@"파싱 불가능...");
+    }
+    
+}
+#pragma mark - xml 파싱 델리게이트
+-(void) parserDidStartDocument:(NSXMLParser *)parser{
+    NSLog(@"파싱 시작!~");
+    self.isParseLineEnd = YES;
 }
 
+-(void) parser:(NSXMLParser *)parser didStartElement:(nonnull NSString *)elementName namespaceURI:(nullable NSString *)namespaceURI qualifiedName:(nullable NSString *)qName attributes:(nonnull NSDictionary<NSString *,NSString *> *)attributeDict{
+    
+    if (self.doGetItemList) {
+        
+        if ([elementName isEqualToString:@"arrmsg1"]){//첫번째 버스 도착 시간
+            self.doGetData = YES;
+        }else if ([elementName isEqualToString:@"arrmsg2"]){//두번째 버스 도착 시간
+            self.doGetData = YES;
+        }else if ([elementName isEqualToString:@"rtNm"]){//해당 버스 번호
+            self.doGetData = YES;
+        }else if ([elementName isEqualToString:@"stNm"]){//현재역
+            self.doGetData = YES;
+        }
+        
+        self.isParseLineEnd = NO;
+        self.combineString = [[NSMutableString alloc] initWithString:@""];    //초기화
+    }else{
+        if ([elementName isEqualToString:@"itemList"]) {
+            self.doGetItemList = YES;
+            NSLog(@"=================================");
+        }
+    }
+}
+
+-(void) parser:(NSXMLParser *)parser foundCharacters:(nonnull NSString *)string{
+    
+    if (self.doGetData) {
+        [self.combineString appendString:string];
+    }
+}
+
+-(void) parser:(NSXMLParser *)parser didEndElement:(nonnull NSString *)elementName namespaceURI:(nullable NSString *)namespaceURI qualifiedName:(nullable NSString *)qName{
+    
+    if (self.doGetData) {
+        NSLog(@"결과는 => %@", self.combineString );
+        self.doGetData = NO;
+        
+        if ([elementName isEqualToString:@"arrmsg1"]){//첫번째 버스 도착 시간
+            [self.infoDic setValue:self.combineString forKey:@"arrmsg1"];
+        }else if ([elementName isEqualToString:@"arrmsg2"]){//두번째 버스 도착 시간
+            [self.infoDic setValue:self.combineString forKey:@"arrmsg2"];
+        }else if ([elementName isEqualToString:@"rtNm"]){//해당 버스 번호
+           [self.infoDic setValue:self.combineString forKey:@"rtNm"];
+        }else if ([elementName isEqualToString:@"stNm"]){//현재역
+            [self.infoDic setValue:self.combineString forKey:@"stNm"];
+        }
+    }
+    
+    self.isParseLineEnd = YES;
+    
+    if ([elementName isEqualToString:@"itemList"]) {
+        self.doGetItemList = NO;
+         NSLog(@"=================================");
+        [self.array addObject:[self.infoDic copy]];
+    }
+}
+
+-(void) parserDidEndDocument:(NSXMLParser *)parser{
+    NSLog(@"파싱 끝!~");
+}
 
 #pragma mark - 테이블
 
@@ -139,8 +191,8 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    
-    cell.textLabel.text = [self.array objectAtIndex:indexPath.row];
+    NSDictionary *busInfo = [self.array objectAtIndex:indexPath.row];
+    cell.textLabel.text = [busInfo objectForKey:@"rtNm"];
     return cell;
 }
 
