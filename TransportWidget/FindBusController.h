@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BusInfoDO.h"
 
 @interface FindBusController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSXMLParserDelegate>
 

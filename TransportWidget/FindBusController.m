@@ -15,7 +15,7 @@
 @property bool isParseLineEnd;  //파싱할 때 데이터를 가져올지 말지
 @property NSMutableString* combineString;  //파싱된 문자열을 조합할 때 사용
 @property NSMutableArray *array;
-@property NSMutableDictionary *infoDic;    //한 버스의 정보들을 담을 곳
+@property BusInfoDO *infoDO;    //한 버스의 정보들을 담을 곳
 @property (nonatomic, strong) NSMutableData *responseData;
 
 @end
@@ -24,11 +24,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.infoDic = [[NSMutableDictionary alloc]initWithDictionary:@{@"arrmsg1":@"",
+    NSMutableDictionary *initDic = [[NSMutableDictionary alloc]initWithDictionary:@{@"arrmsg1":@"",
                                                                     @"arrmsg2":@"",
                                                                     @"rtNm":@"정류장 번호를 입력하세요.",
                                                                     @"stNm":@""}];
-    self.array = [[NSMutableArray alloc]initWithObjects:self.infoDic, nil];
+    BusInfoDO *initDO = [BusInfoDO setBusInfo:initDic];
+    self.array = [[NSMutableArray alloc]initWithObjects:initDO, nil];
     
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     [self.view addGestureRecognizer:tap];
@@ -100,6 +101,7 @@
     NSXMLParser *xmlData = [[NSXMLParser alloc] initWithData:self.responseData];
     xmlData.delegate = self;
     [self.array removeAllObjects];  //모든 입력값을 지우고 값을 받아들일 준비를 한다.
+    self.infoDO = [BusInfoDO alloc];
     if ([xmlData parse]) {
         NSLog(@"파싱 가능!!");
         [self.tableView reloadData];
@@ -152,13 +154,13 @@
         self.doGetData = NO;
         
         if ([elementName isEqualToString:@"arrmsg1"]){//첫번째 버스 도착 시간
-            [self.infoDic setValue:self.combineString forKey:@"arrmsg1"];
+            self.infoDO.arrmsg1 = self.combineString;
         }else if ([elementName isEqualToString:@"arrmsg2"]){//두번째 버스 도착 시간
-            [self.infoDic setValue:self.combineString forKey:@"arrmsg2"];
+            self.infoDO.arrmsg2 = self.combineString;
         }else if ([elementName isEqualToString:@"rtNm"]){//해당 버스 번호
-           [self.infoDic setValue:self.combineString forKey:@"rtNm"];
+           self.infoDO.rtNm = self.combineString;
         }else if ([elementName isEqualToString:@"stNm"]){//현재역
-            [self.infoDic setValue:self.combineString forKey:@"stNm"];
+            self.infoDO.stNm = self.combineString;
         }
     }
     
@@ -167,7 +169,8 @@
     if ([elementName isEqualToString:@"itemList"]) {
         self.doGetItemList = NO;
          NSLog(@"=================================");
-        [self.array addObject:[self.infoDic copy]];
+        [self.array addObject:self.infoDO];
+        self.infoDO = [BusInfoDO alloc];
     }
 }
 
@@ -191,8 +194,8 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    NSDictionary *busInfo = [self.array objectAtIndex:indexPath.row];
-    cell.textLabel.text = [busInfo objectForKey:@"rtNm"];
+    BusInfoDO *busInfo = [self.array objectAtIndex:indexPath.row];
+    cell.textLabel.text = busInfo.rtNm;
     return cell;
 }
 

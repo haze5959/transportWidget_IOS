@@ -29,6 +29,9 @@
 		CEB08BD11E1DF74D00C12585 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB08BCF1E1DF74D00C12585 /* Main.storyboard */; };
 		CEB08BD31E1DF74D00C12585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB08BD21E1DF74D00C12585 /* Assets.xcassets */; };
 		CEB08BD61E1DF74D00C12585 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB08BD41E1DF74D00C12585 /* LaunchScreen.storyboard */; };
+		CECF01A41E5E6A4000AA862C /* BusInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CECF01A21E5E6A4000AA862C /* BusInfoCell.m */; };
+		CECF01A51E5E6A4000AA862C /* BusInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECF01A31E5E6A4000AA862C /* BusInfoCell.xib */; };
+		CECF01A91E5E6B1C00AA862C /* BusInfoDO.m in Sources */ = {isa = PBXBuildFile; fileRef = CECF01A81E5E6B1C00AA862C /* BusInfoDO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,11 @@
 		CEB08BD21E1DF74D00C12585 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEB08BD51E1DF74D00C12585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEB08BD71E1DF74D00C12585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECF01A11E5E6A4000AA862C /* BusInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusInfoCell.h; sourceTree = "<group>"; };
+		CECF01A21E5E6A4000AA862C /* BusInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusInfoCell.m; sourceTree = "<group>"; };
+		CECF01A31E5E6A4000AA862C /* BusInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusInfoCell.xib; sourceTree = "<group>"; };
+		CECF01A71E5E6B1C00AA862C /* BusInfoDO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusInfoDO.h; sourceTree = "<group>"; };
+		CECF01A81E5E6B1C00AA862C /* BusInfoDO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusInfoDO.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +120,7 @@
 		CE1A6BEC1E31DD9E00C8450C /* FindBus */ = {
 			isa = PBXGroup;
 			children = (
+				CECF019B1E5E69D200AA862C /* Cell */,
 				CE6C81B81E23561D00AC1CFC /* FindBusController.h */,
 				CE6C81B91E23561D00AC1CFC /* FindBusController.m */,
 				CE6C81BA1E23561D00AC1CFC /* FindBusController.xib */,
@@ -194,6 +203,7 @@
 		CEB08BC51E1DF74D00C12585 /* TransportWidget */ = {
 			isa = PBXGroup;
 			children = (
+				CECF01A61E5E6ADE00AA862C /* DataObject */,
 				CE1A6BF91E31F09F00C8450C /* PopUp */,
 				CE1A6BED1E31DDA800C8450C /* FindSubway */,
 				CE1A6BEC1E31DD9E00C8450C /* FindBus */,
@@ -217,6 +227,25 @@
 				CEB08BC71E1DF74D00C12585 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CECF019B1E5E69D200AA862C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CECF01A11E5E6A4000AA862C /* BusInfoCell.h */,
+				CECF01A21E5E6A4000AA862C /* BusInfoCell.m */,
+				CECF01A31E5E6A4000AA862C /* BusInfoCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		CECF01A61E5E6ADE00AA862C /* DataObject */ = {
+			isa = PBXGroup;
+			children = (
+				CECF01A71E5E6B1C00AA862C /* BusInfoDO.h */,
+				CECF01A81E5E6B1C00AA862C /* BusInfoDO.m */,
+			);
+			name = DataObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +344,7 @@
 				CE1A6C011E31FC8B00C8450C /* checkbox_off_nor@2x.png in Resources */,
 				CE1A6C031E31FCB900C8450C /* checkbox_on_nor@2x.png in Resources */,
 				CE1A6BEB1E31D8AD00C8450C /* FindSubwayController.xib in Resources */,
+				CECF01A51E5E6A4000AA862C /* BusInfoCell.xib in Resources */,
 				CEB08BD11E1DF74D00C12585 /* Main.storyboard in Resources */,
 				CE1A6BFE1E31F0D500C8450C /* WidgetSelectPopUp.xib in Resources */,
 				CE1A6C061E31FCEB00C8450C /* checkbox_off_nor@3x.png in Resources */,
@@ -341,9 +371,11 @@
 				CEB08BCE1E1DF74D00C12585 /* ViewController.m in Sources */,
 				CE1A6BE91E31D88300C8450C /* FindSubwayController.m in Sources */,
 				CE6C81BB1E23561D00AC1CFC /* FindBusController.m in Sources */,
+				CECF01A91E5E6B1C00AA862C /* BusInfoDO.m in Sources */,
 				CEB08BCB1E1DF74D00C12585 /* AppDelegate.m in Sources */,
 				CE1A6BF71E31DF6300C8450C /* SubwayResultController.m in Sources */,
 				CE1A6BFD1E31F0D500C8450C /* WidgetSelectPopUp.m in Sources */,
+				CECF01A41E5E6A4000AA862C /* BusInfoCell.m in Sources */,
 				CEB08BC81E1DF74D00C12585 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
