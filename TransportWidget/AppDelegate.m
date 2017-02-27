@@ -17,6 +17,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+//    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait
+//                                                       animated:NO];
+    
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:NO];
+//    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -45,6 +54,14 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+//토스트 관련
+- (void)showToastMessage:(NSString *)message
+                duration:(float)duration {
+    [self.window makeToast:message
+                  duration:duration
+                  position:@"bottom"];
 }
 
 

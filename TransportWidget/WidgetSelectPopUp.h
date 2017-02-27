@@ -14,6 +14,7 @@
 
 //생성자
 + (WidgetSelectPopUp *)viewController;
+//- (void) setData:(NSString *)saveNum isBus:(NSString *)isBus;
 
 @end
 

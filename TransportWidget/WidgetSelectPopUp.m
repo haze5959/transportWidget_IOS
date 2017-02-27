@@ -11,7 +11,7 @@
 @interface WidgetSelectPopUp ()
 
 //확인 버튼 눌렀을 때 전달할 값
-@property (strong, nonatomic) NSDictionary *optionalDic;
+@property (strong, nonatomic) NSMutableDictionary *optionalDic;
 
 @end
 
@@ -19,9 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setUI];
-    self.optionalDic = @{@"ComeAndGo" : @"go",
-                         @"BookMarkNum" : @"1"};
+
+    self.optionalDic = [[NSMutableDictionary alloc]initWithDictionary:@{@"ComeAndGo" : @"go",
+                                                                        @"BookMarkNum" : @"1"}];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,10 +29,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - SetUI
+#pragma mark - SetDate
 
--(void) setUI{
-}
+//- (void) setData:(NSString *)stationNum isBus:(NSString *)isBus{
+//    [self.optionalDic setValue:stationNum forKey:@"saveNum"];
+//    [self.optionalDic setValue:isBus forKey:@"isBus"];
+//}
 
 #pragma mark - init
 

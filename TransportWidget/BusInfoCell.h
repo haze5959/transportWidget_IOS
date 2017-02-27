@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BusInfoDO.h"
 
 @interface BusInfoCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *rtNm;
+@property (weak, nonatomic) IBOutlet UILabel *arrmsg1;
+@property (weak, nonatomic) IBOutlet UILabel *arrmsg2;
 
-//+ (BusInfoCell*)cell;
-//- (void)setUIWihtDeviceData:(BusInfoDO*)deviceData;
+
++ (BusInfoCell*)cell;
+- (void)setUIWihtDeviceData:(BusInfoDO*)dataObject;
 
 @end

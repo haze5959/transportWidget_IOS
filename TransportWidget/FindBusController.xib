@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FindBusController">
             <connections>
                 <outlet property="inputText" destination="0Vx-Wq-xCF" id="2Us-3o-eVK"/>
+                <outlet property="navBar" destination="tvO-Bo-YVF" id="0mX-9A-STi"/>
+                <outlet property="registBtn" destination="dcZ-4x-UZr" id="yXt-mI-odH"/>
                 <outlet property="tableView" destination="gqa-mZ-Yzd" id="9DE-Cl-O0q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -67,11 +69,15 @@
                     </constraints>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="EO5-Cs-Pt1"/>
+                        <outlet property="delegate" destination="-1" id="PdI-j3-JFW"/>
                     </connections>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcZ-4x-UZr">
+                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcZ-4x-UZr">
                     <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                     <state key="normal" title="위젯에 등록하기"/>
+                    <connections>
+                        <action selector="clickRegistBtn:" destination="-1" eventType="touchUpInside" id="VpS-Ff-kqx"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
