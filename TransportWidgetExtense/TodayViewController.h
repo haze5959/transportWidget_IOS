@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BusInfoDO.h"
 
-@interface TodayViewController : UIViewController
+@interface TodayViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSXMLParserDelegate>
+
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end

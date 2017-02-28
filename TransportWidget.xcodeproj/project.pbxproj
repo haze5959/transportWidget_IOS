@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0EEBBA1E655CAB00E7CFB6 /* BusInfoDO.m in Sources */ = {isa = PBXBuildFile; fileRef = CECF01A81E5E6B1C00AA862C /* BusInfoDO.m */; };
+		CE0EEBBB1E655CB900E7CFB6 /* BusInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CECF01A21E5E6A4000AA862C /* BusInfoCell.m */; };
+		CE0EEBBC1E656D5400E7CFB6 /* BusInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECF01A31E5E6A4000AA862C /* BusInfoCell.xib */; };
 		CE1A6BE91E31D88300C8450C /* FindSubwayController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1A6BE81E31D88300C8450C /* FindSubwayController.m */; };
 		CE1A6BEB1E31D8AD00C8450C /* FindSubwayController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1A6BEA1E31D8AD00C8450C /* FindSubwayController.xib */; };
 		CE1A6BF71E31DF6300C8450C /* SubwayResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1A6BF51E31DF6300C8450C /* SubwayResultController.m */; };
@@ -346,6 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0EEBBC1E656D5400E7CFB6 /* BusInfoCell.xib in Resources */,
 				CE6C81AD1E2317D000AC1CFC /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,7 +381,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0EEBBB1E655CB900E7CFB6 /* BusInfoCell.m in Sources */,
 				CE6C81AA1E2317D000AC1CFC /* TodayViewController.m in Sources */,
+				CE0EEBBA1E655CAB00E7CFB6 /* BusInfoDO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
